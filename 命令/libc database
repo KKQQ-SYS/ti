@@ -1,0 +1,86 @@
+支持的命令
+find 用于根据符号和偏移查找libc版本，打印libc ID。
+./find puts 0x000000000004f440
+
+dump 用于转储查到的libc库中的一些常用符号和偏移，也可以通过指定符号转储偏移。
+./dump libc6_2.27-3ubuntu1_amd64.so 
+./dump libc6_2.27-3ubuntu1_amd64.so puts
+
+add 用于手动添加一些libc库到db。
+add libc6_2.27-3ubuntu1_amd64.so
+
+identify 用于判断某个libc是否已经存在于db，支持hash查找。
+./identify libc6_2.27-3ubuntu1_amd64.so
+
+download 用于下载与libc ID相对应的整个libc到libs目录。
+./download libc6_2.27-3ubuntu1_amd64.so
+
+get 下载libc到db，用于初始化于更新libc database。
+./get
+
+
+这玩意真的不好用
+
+
+
+
+Ubuntu	glibc(max)
+16.04 (xenial)	2.23
+18.04 (bionic)	2.27
+20.04 (focal)	2.31
+22.04 (jammy)	2.35
+24.04 (noble)	2.39
+
+也就是我们分别将 版本 修改为 :
+plucky oracular noble 等就可以查到对应的Ubuntu版本所使用的历史libc版本
+https://launchpad.net/ubuntu/版本/amd64/libc6
+下面使用 Ubuntu20 版本来举例
+比如我们想要找一个glibc版本为2.31的glibc
+那么2.31的glibc应该是对应的Ubuntu20版本
+那么我们就将版本修改为 focal 也就是URL修改为(注意这里focal必须全部小写)
+https://launchpad.net/ubuntu/focal/amd64/libc6
+
+write = u32(p.recvuntil(b'\xf7')[-4:])
+write = u64(p.recvuntil(b'\x7f')[-6:].ljust(8,b'\x00'))
+puts = u64(p.recv(6).ljust(8,b'\x00'))
+
+printf泄露，因为他输出字符串
+printf = int(p.recvline().strip().decode(), 16)
+
+
+
+v5 = p.recvuntil(b']', drop=True)   #从远程程序接收数据，直到遇到 ']' 为止，并把这个 ']' 丢掉（不包含在返回结果里）
+v5 = int(v5, 16)
+print(hex(v5))
+
+
+addr = u64(unhex(io.recvline(keepends=False).zfill(16)), endian='big')
+recvline() → 得到 "7fff1234abcd"
+
+.zfill(16) → 得到 "00007fff1234abcd"
+
+unhex() → 得到字节：\x00\x00\x7f\xff\x12\x34\xab\xcd
+
+u64(..., endian='big') → 转换为整数：0x7fff1234abcd
+
+
+io.recvuntil("location: ")
+position=io.recvuntil("\n")
+print(position)
+
+puts_real_addr = u32(p.recv()[0:4])  #接收puts的真实地址，占4个字
+
+ content = io.recv()[:8]
+
+  content = io.recv()[5:]
+
+  main = int(p.recvline(), 16)
+
+p.recvuntil(b"What's")
+line = p.recvline()
+m = re.search(b'0x[0-9a-fA-F]+', line)
+printf = int(m.group(), 16)
+print(hex(printf))
+
+
+

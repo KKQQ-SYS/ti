@@ -1,0 +1,5 @@
+用法：
+  use_libc <libc目录名> <目标程序>
+
+示例：
+  qq libc6_2.13-20ubuntu5_amd64 vulnerable_program

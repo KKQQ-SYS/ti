@@ -1,0 +1,20 @@
+========== 本地程序 gadgets (K) ==========
+  pop_rax     : 0x40126a
+  pop_rbp     : 0x40119d
+  pop_rdi     : 0x40126c
+  pop_rdx     : 0x401270
+  pop_rsi     : 0x40126e
+  add_rsp_0x8 : 0x401016
+  leave       : 0x4011f9
+  ret         : 0x40101a
+  syscall     : 0x401272
+  syscall_ret : 0x401272
+  read        : 0x401090
+  exit        : 0x4010c0
+  printf      : 0x401070
+  puts        : 0x401050
+  共 14 个 gadgets
+
+========== Libc gadgets (L) ==========
+  (未找到任何 gadgets)
+========================================

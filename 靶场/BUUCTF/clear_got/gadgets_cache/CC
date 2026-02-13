@@ -1,0 +1,22 @@
+========== 本地程序 gadgets (K) ==========
+  pop_r12_r13_r14_r15         : 0x4007ec
+  pop_r13_r14_r15             : 0x4007ed
+  pop_rbp                     : 0x400620
+  pop_rdi                     : 0x4007f3
+  pop_rsi_r15                 : 0x4007f1
+  add_rsp_0x8                 : 0x400535
+  leave                       : 0x400761
+  ret                         : 0x400539
+  syscall                     : 0x40076e
+  syscall_ret                 : 0x40077e
+  read                        : 0x400590
+  csu_mov_call_gadget         : 0x4007d0
+  csu_pop_gadget              : 0x4007ea
+  pop_rbp_r12_r13_r14_r15     : 0x4007eb
+  pop_rbx_rbp_r12_r13_r14_r15 : 0x4007ea
+  puts                        : 0x400550
+  共 16 个 gadgets
+
+========== Libc gadgets (L) ==========
+  (未找到任何 gadgets)
+========================================

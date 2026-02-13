@@ -1,0 +1,36 @@
+传参方式
+64位 = ROPgadget --binary pwn | grep "pop rdx"
+32位 = ROPgadget --binary ./pwn | grep "pop ebx"
+32位3参数 = ROPgadget --binary ./pwn --only "pop|ret" | grep "pop ebx" | grep "pop esi" | grep "pop ebp"
+
+
+
+ROP工具指令
+一.
+命令: ROPgadget --binary pwn --only "pop|ret" | grep rdi
+命令: ROPgadget --binary 文件名 --only "pop|ret" | grep rsi
+
+二.
+
+该工具除了可以用来查找 ret/rdi的地址,还可以用来查找一些字符串的地址
+
+命令: ROPgadget --binary 文件名 --sting '/bin/sh'
+
+命令: ROPgadget --binary 文件名 --sting '/sh'
+
+命令: ROPgadget --binary 文件名 --sting 'sh'
+
+命令: ROPgadget --binary 文件名 --sting 'cat flag'
+
+命令: ROPgadget --binary 文件名 --sting 'cat flag.txt'
+
+示例  ROPgadget --binary pwn --only "int" | grep "0x80"
+
+
+ropper使用
+ropper --file ./pwn --search "int 0x80"
+ropper --file ./pwn --search "pop eax"
+ropper --file ./pwn --search "pop edx; pop ecx; pop ebx"
+
+ROPgadget --binary pwn --ropchain
+# 该命令可以生成完整的ropchain

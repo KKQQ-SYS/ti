@@ -1,0 +1,2 @@
+ausyscall --dump | grep -E "(read|execve|write)"
+ausyscall --dump i386 | grep -E "(read|execve|write)"

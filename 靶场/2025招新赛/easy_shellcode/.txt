@@ -1,0 +1,8 @@
+easy_shellcode
+661 pts
+
+题目难度：简单
+
+出题人：SpaceDraG0n
+
+什么是shellcode？该怎么去利用呢？

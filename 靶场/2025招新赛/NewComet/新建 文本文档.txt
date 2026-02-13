@@ -1,0 +1,17 @@
+题目难度：签到
+
+出题人：SpaceDraG0n
+
+迟迟钟鼓初长夜，耿耿星河欲曙天。
+
+在漫漫长夜中，银河璀璨明亮，预示着天即将破晓。
+
+靶机使用nc连接，后面遇到的一系列pwn题目都需要在linux环境下进行，建议提前搭建好虚拟机环境，并安装好主要的工具如 pwntools 、gdb 、patchelf 等 。
+
+连接方式 -> 在Linux终端输入 :  nc [ip] [port]  （ip 和 port 为开启容器后提供）
+
+做题前可以先去了解一下 Linux 系统下常见的操作命令哦 ~
+
+PWN环境搭建教程：https://blog.csdn.net/j284886202/article/details/139352067 (不会搭建的也可以直接下载文章内已搭建好的pwn环境进行临时使用)
+
+若需要 Vmware workstation 可以自行前往qq群文件查看

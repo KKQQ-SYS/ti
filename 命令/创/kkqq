@@ -1,0 +1,9 @@
+kkqq pwn         是
+file pwn
+#多少位
+
+ checksec pwn
+#检测安全性
+
+seccomp-tools dump pwn
+#查看seccomp规则（黑盒）

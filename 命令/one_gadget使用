@@ -1,0 +1,4 @@
+one_gadget  -l2 /home/kk/ti/靶场/2025招新赛/HelloLibc/HelloLibc/libc.so.6
+后面加-l2参数可以找到更多的gadget。
+另外还有一个near功能也很管用，可以找最靠近某个函数的gadget，这里我以libc 2.23为例。
+one_gadget  -l2 /home/kk/ti/靶场/2025招新赛/HelloLibc/HelloLibc/libc.so.6 --near read

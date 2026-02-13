@@ -1,0 +1,28 @@
+/update_list
+#更新支持的包列表：
+
+/download 2.23-0ubuntu10_amd64
+#下载特定版本的 glibc：
+./download_old 2.23-0ubuntu10_amd64
+#下载历史版本的 glibc：
+
+
+list - 包含当前支持的glibc版本
+old_list - 包含历史版本的glibc包信息
+
+./extract ~/libc6_2.26-0ubuntu2_i386.deb /tmp/custom_glibc
+#解压特定版本的glibc的deb包到指定目录
+
+grep "2.23" list
+#查找特定版本(2.23)的glibc包信息
+
+readelf -s "/home/kk/ti/靶场/路边/start_hard1_写不出/libc.so.6" | grep "puts"
+#查找特定版本(2.23)的glibc的符号表中有哪些函数
+
+
+三、glibc 2.23 对应的系统版本
+glibc 版本	常见系统
+2.23	Ubuntu 16.04 LTS
+2.27	Ubuntu 18.04
+2.31	Ubuntu 20.04
+2.35	Ubuntu 22.04

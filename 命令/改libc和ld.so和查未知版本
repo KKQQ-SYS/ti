@@ -1,0 +1,14 @@
+patchelf --set-interpreter /lib/my-ld-linux.so.2 my-program
+#'/lib/my-ld-linux.so.2'：ld-linux.so文件的路径
+#'my-program'：pwn题样本文件的名称
+
+patchelf --replace-needed libc.so.6 /path/to/new/libc vulnerable_program
+#patchelf --replace-needed 原始库名 新库路径 可执行文件
+
+strings ./libc.so.6 | grep -i version
+#strings 库文件路径 | grep -i 关键词
+#查看库文件版本信息
+
+dpkg -s libc6 | grep Version
+#dpkg -s 库名 | grep Version
+#查询系统中已安装的 libc 版本

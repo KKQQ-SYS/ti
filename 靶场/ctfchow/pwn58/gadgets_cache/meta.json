@@ -1,0 +1,9 @@
+{
+  "elf_path": "/home/kk/ti/靶场/ctfchow/pwn58/pwn",
+  "libc_path": "",
+  "libc_base": "0x0",
+  "arch": "i386",
+  "generated_at": "2026-01-19 15:29:35",
+  "has_libc": false,
+  "elf_mtime": 1768806074.5064185
+}
