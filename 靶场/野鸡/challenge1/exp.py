@@ -1,11 +1,11 @@
-from pwn import *
+from kk import *
 import struct
 #import time
 
 def solve():
     # 本地运行程序（替换 socket）
     p = process("./challenge")
-    
+    GDB(p)
     # 读取泄露地址（比你逐字节稳定100倍）
     data = p.recvline().strip()
     print(f"[*] Leaked info: {data.decode()}")

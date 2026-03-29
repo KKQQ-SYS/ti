@@ -1,3 +1,10 @@
 {
-    "C_Cpp.errorSquiggles": "enabled"
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "*.asm": "asm-collection",
+        "*.inc": "asm-collection",
+        "*.s": "asm-collection"
+    },
+    "asm-code-lens.enableCompletions": true,
+    "asm-code-lens.completionsRequiredLength": 1
 }

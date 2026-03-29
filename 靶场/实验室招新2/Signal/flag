@@ -1,0 +1,9 @@
+ssh -p 20212 ctf@120.26.60.25
+
+ctf@0e09d7ed7895:~$ kill -10 140
+ctf@0e09d7ed7895:~$ kill -12 140
+ctf@0e09d7ed7895:~$ kill -10 140
+ctf@0e09d7ed7895:~$ kill -10 140
+ctf@0e09d7ed7895:~$ kill -12 140
+
+flag: HCTF{This_ise67b8c23-45db-4980-bafa-ed91d768c069}
